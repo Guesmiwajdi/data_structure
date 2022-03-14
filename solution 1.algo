@@ -1,0 +1,29 @@
+ALGORITHM data checkpoint
+VAR
+tab1 : ARRAY_OF INTEGER[];
+tab2 : ARRAY_OF INTEGER[]; 
+
+i, j : INTEGER;
+BEGIN 
+
+FOR i FROM 0 TO tab1.length-1 STEP 1 DO   
+  read (tab1[i]) 
+END_FOR
+FOR j FROM 0 TO tab2.length-1 STEP 1 DO   
+  read (tab2[j]) 
+END_FOR
+
+FOR i FROM 0 TO tab1.length-1 STEP 1  DO
+FOR j FROM 0 TO tab2.length-1 STEP 1  DO
+    sum+=tab1[i]
+END_FOR
+END_FOR
+FOR i FROM 0 TO tab2.length-1 STEP 1  DO
+FOR j FROM 0 TO tab1.length-1 STEP 1  DO
+    sum+=tab2[i]
+    END_FOR
+    END_FOR
+    write(sum)
+END   
+
+

@@ -1,0 +1,32 @@
+ALGORITHM HASH_TABLE
+VAR
+htab : HASH_TABLE<INTEGER, INTEGER>;
+tab1: ARRAY_OF INTEGER[]
+tab2:ARRAY_OF INTEGER[]
+i,count : INTEGER;
+BEGIN
+Read(tab1);
+
+   FOR i FROM 0 TO tab1.length -1 STEP 1  DO
+       IF (htab.lookup(tab1[i]) = TRUE) THEN
+           htab.insert(tab1[i],count+1);
+       ELSE
+       htab.insert(tab1[i],count);
+       END_IF
+   END_FOR
+ Read(tab2);
+  FOR i FROM 0 TO tab2.length -1 STEP 1  DO
+   IF (htab.lookup(tab2[i]) = TRUE) THEN
+       htab.insert(tab2[i],count+1);
+   ELSE
+   htab.insert(tab2[i],count);
+   END_IF
+END_FOR
+for (let element in htab) {
+    if (htab.get(element) = 1) {
+   sum+=element;
+   }
+   }
+END_FOR
+   write(sum)
+END
