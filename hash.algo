@@ -3,7 +3,7 @@ VAR
 htab : HASH_TABLE<INTEGER, INTEGER>;
 tab1: ARRAY_OF INTEGER[]
 tab2:ARRAY_OF INTEGER[]
-i,count : INTEGER;
+i,count : INTEGER =1;
 BEGIN
 Read(tab1);
 
@@ -15,11 +15,11 @@ Read(tab1);
        END_IF
    END_FOR
  Read(tab2);
-  FOR i FROM 0 TO tab2.length -1 STEP 1  DO
-   IF (htab.lookup(tab2[i]) = TRUE) THEN
-       htab.insert(tab2[i],count+1);
+  FOR j FROM 0 TO tab2.length -1 STEP 1  DO
+   IF (htab.lookup(tab2[j]) = TRUE) THEN
+       htab.insert(tab2[j],count+1);
    ELSE
-   htab.insert(tab2[i],count);
+   htab.insert(tab2[j],count);
    END_IF
 END_FOR
 for (let element in htab) {
